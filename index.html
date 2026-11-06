@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عبدالرحمن وآمنة — ١٢ آب ٢٠٢٨</title>
+<meta name="description" content="برفقة عائلتيهما، يدعوكم عبدالرحمن وآمنة لمشاركتهما فرحة زفافهما في صالة ليلة العمر، غزة.">
+<meta property="og:title" content="عبدالرحمن وآمنة — دعوة زفاف">
+<meta property="og:description" content="شاركونا فرحتنا يوم ١٢ آب ٢٠٢٨ في صالة ليلة العمر، غزة.">
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="preload" as="image" href="assets/images/envelope.jpg">
+<link rel="preload" as="image" href="assets/images/hero.jpg">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/amiri-700-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/cinzel-latin.woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  /* ===== Site fonts (hosted locally in assets/fonts) =====
+     Cinzel for English letters & numbers, Amiri for Arabic */
+  @font-face { font-family: 'Cinzel Local'; font-style: normal; font-weight: 400 900; font-display: swap;
+    src: url(assets/fonts/cinzel-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: 'Amiri Local'; font-style: normal; font-weight: 400; font-display: swap;
+    src: url(assets/fonts/amiri-400-arabic.woff2) format('woff2');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+  @font-face { font-family: 'Amiri Local'; font-style: normal; font-weight: 700; font-display: swap;
+    src: url(assets/fonts/amiri-700-arabic.woff2) format('woff2');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+  @font-face { font-family: 'Amiri Local'; font-style: normal; font-weight: 400; font-display: swap;
+    src: url(assets/fonts/amiri-400-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: 'Amiri Local'; font-style: normal; font-weight: 700; font-display: swap;
+    src: url(assets/fonts/amiri-700-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  /* Latin characters render in Cinzel; Arabic falls through to Amiri */
+  body, body *:not(svg):not(svg *) { font-family: 'Cinzel Local', 'Amiri Local', serif !important; }
+  .invitation-ar .font-couple, .invitation-ar .font-display, .invitation-ar .font-editorial, .invitation-ar .wax-stamp-mark { font-weight: 700; }
+  .invitation-ar .font-script { font-weight: 400; }
+  /* Clickable wax seal on the opening envelope */
+  .seal-btn { position: absolute; z-index: 20; border-radius: 9999px; transform: translate(-50%, -50%); cursor: pointer; background: transparent; transition: opacity .5s; }
+  .seal-btn::before, .seal-btn::after { content: ""; position: absolute; inset: -4px; border-radius: inherit; border: 1.5px solid color-mix(in oklab, var(--gold) 85%, transparent); animation: seal-pulse 2.4s ease-out infinite; pointer-events: none; }
+  .seal-btn::after { animation-delay: 1.2s; }
+  .seal-btn:hover::before, .seal-btn:hover::after { border-color: var(--primary); }
+  .seal-btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+  @keyframes seal-pulse { 0% { transform: scale(.92); opacity: .9; } 100% { transform: scale(1.5); opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .seal-btn::before, .seal-btn::after { animation: none; opacity: .7; } }
+  /* Wide screens: keep the envelope at phone proportions, blurred photo fills the sides */
+  .opening-backdrop { position: fixed; inset: 0; z-index: 49; overflow: hidden; background: var(--background); transition: opacity .85s; }
+  .opening-backdrop img { width: 100%; height: 100%; object-fit: cover; filter: blur(22px) brightness(.97); transform: scale(1.1); }
+  /* Venue map — framed like the rest of the stationery */
+  .map-frame { position: relative; padding: 10px; background: var(--card);
+    border: 1px solid color-mix(in oklab, var(--gold) 60%, transparent);
+    box-shadow: inset 0 0 0 4px var(--card), inset 0 0 0 5px color-mix(in oklab, var(--gold) 40%, transparent),
+                0 18px 44px color-mix(in oklab, var(--foreground) 13%, transparent);
+    transform: rotate(-.6deg); }
+  .map-window { position: relative; height: 17rem; overflow: hidden;
+    border: 1px solid color-mix(in oklab, var(--gold) 45%, transparent); }
+  /* Shift the map up to hide Google's white info card; the attribution at the bottom stays visible */
+  .map-window iframe { position: absolute; left: 0; top: -58px; width: 100%; height: calc(100% + 58px); border: 0;
+    filter: sepia(.32) saturate(.78) hue-rotate(-12deg) contrast(.96) brightness(1.02);
+    transition: filter .6s ease; }
+  .map-window:hover iframe, .map-window:focus-within iframe { filter: none; }
+  .map-vignette { position: absolute; inset: 0; pointer-events: none;
+    box-shadow: inset 0 0 38px color-mix(in oklab, var(--rose-soft) 55%, transparent);
+    background: linear-gradient(to bottom, color-mix(in oklab, var(--card) 35%, transparent), transparent 18%); }
+  .map-corner { position: absolute; z-index: 2; width: 22px; height: 22px; pointer-events: none;
+    border-color: var(--gold); border-style: solid; border-width: 0; }
+  .map-corner.tl { top: -5px; left: -5px; border-top-width: 1.5px; border-left-width: 1.5px; }
+  .map-corner.tr { top: -5px; right: -5px; border-top-width: 1.5px; border-right-width: 1.5px; }
+  .map-corner.bl { bottom: -5px; left: -5px; border-bottom-width: 1.5px; border-left-width: 1.5px; }
+  .map-corner.br { bottom: -5px; right: -5px; border-bottom-width: 1.5px; border-right-width: 1.5px; }
+  .map-corner::after { content: ""; position: absolute; width: 5px; height: 5px; border-radius: 9999px; background: var(--primary); }
+  .map-corner.tl::after { top: -3px; left: -3px; } .map-corner.tr::after { top: -3px; right: -3px; }
+  .map-corner.bl::after { bottom: -3px; left: -3px; } .map-corner.br::after { bottom: -3px; right: -3px; }
+  @media (prefers-reduced-motion: reduce) { .map-window iframe { transition: none; } }
+  /* Arabic couple names */
+  @media (min-aspect-ratio: 3/4) {
+    #opening { right: auto; left: 50%; width: 56.25svh; margin-left: -28.125svh; box-shadow: 0 0 60px color-mix(in oklab, var(--foreground) 18%, transparent); }
+  }
+  /* Wishes wall */
+  .wish-status { min-height: 1.5rem; margin-top: .9rem; text-align: center; font-size: .85rem; color: var(--primary); }
+  .wishes-list { margin-top: 2.25rem; display: flex; gap: .85rem; overflow-x: auto; overflow-y: hidden; padding: 2px 2px 12px;
+    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+    scrollbar-width: thin; scrollbar-color: color-mix(in oklab, var(--gold) 60%, transparent) transparent; }
+  .wishes-list::-webkit-scrollbar { height: 4px; }
+  .wishes-list::-webkit-scrollbar-thumb { background: color-mix(in oklab, var(--gold) 60%, transparent); border-radius: 9999px; }
+  .wishes-list .wish-card { flex: 0 0 78%; max-width: 18rem; scroll-snap-align: start; display: flex; flex-direction: column;
+    max-height: 14rem; overflow-y: auto; }
+  .wishes-list .wish-card time { margin-top: auto; padding-top: .35rem; }
+  .wishes-list .wishes-empty { flex: 1 0 100%; }
+  .wish-card { position: relative; border: 1px solid color-mix(in oklab, var(--gold) 45%, transparent);
+    background: color-mix(in oklab, var(--card) 60%, transparent); padding: 1rem 1.1rem .8rem;
+    font-size: .9rem; line-height: 1.8; color: var(--foreground); white-space: pre-wrap; word-break: break-word;
+    animation: wishIn .5s ease both; }
+  .wish-card time { display: block; margin-top: .35rem; font-size: .7rem; color: var(--muted-foreground); }
+  .wish-name { display: block; margin-bottom: .2rem; font-size: .8rem; color: var(--primary); }
+  .wishes-empty { text-align: center; font-size: .8rem; color: var(--muted-foreground); }
+  @keyframes wishIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .wish-card { animation: none; } }
+</style>
+</head>
+<body>
+<main id="main" dir="rtl" class="invitation-ar mx-auto min-h-screen max-w-[1180px] overflow-hidden bg-background shadow-[0_0_80px_color-mix(in_oklab,var(--foreground)_12%,transparent)]">
+
+  <!-- Music -->
+  <audio id="music" src="assets/music.mp3" loop preload="auto"></audio>
+  <button id="muteBtn" type="button" hidden aria-label="Mute the music" class="fixed start-4 top-4 z-[70] grid h-10 w-10 place-items-center rounded-full border border-primary/35 bg-card/90 text-primary shadow-md backdrop-blur-sm transition-colors hover:bg-primary hover:text-primary-foreground">
+    <svg id="icoVol" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-2 h-4 w-4" aria-hidden="true"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
+    <svg id="icoMute" hidden xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-x h-4 w-4" aria-hidden="true"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><line x1="22" x2="16" y1="9" y2="15"/><line x1="16" x2="22" y1="9" y2="15"/></svg>
+  </button>
+
+  <!-- Opening envelope -->
+  <div id="openingBackdrop" class="opening-backdrop" aria-hidden="true"><img src="assets/images/envelope.jpg" alt=""></div>
+  <div id="opening" class="opening-scene fixed inset-0 z-50 min-h-[100svh] overflow-hidden bg-background text-center">
+    <img src="assets/images/envelope.jpg" width="768" height="1536" alt="Cream wedding invitation envelope tied with a dusty rose ribbon and wax seal" class="absolute inset-0 h-full w-full object-cover object-center">
+    <video id="openingVideo" src="assets/envelope-opening.mp4" muted playsinline preload="auto" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover object-center opacity-0"></video>
+    <button id="sealBtn" type="button" class="seal-btn opening-fade" aria-label="افتح دعوة زفاف عبدالرحمن وآمنة"></button>
+    <header class="opening-fade absolute inset-x-0 top-[7svh] z-10 transition-opacity duration-500">
+      <p class="font-display text-[13px] uppercase leading-6 tracking-[0.18em] text-foreground" data-t="openingTitle">A wedding invitation<br>like no other</p>
+      <div class="flex items-center justify-center gap-2 mt-1 scale-75 text-foreground/80" aria-hidden="true"><span class="h-px w-9 bg-current"></span><span class="font-display text-lg">❧</span><span class="h-px w-9 bg-current"></span></div>
+    </header>
+    <div class="opening-fade pointer-events-none absolute left-1/2 top-[59.5svh] z-10 w-[46%] -translate-x-1/2 transition-opacity duration-500">
+      <p dir="ltr" class="text-[2.6rem] leading-none tracking-[0.06em] text-primary">A<span class="mx-2 align-middle text-[1.9rem] text-gold">&amp;</span>A</p>
+      <p class="mt-1.5 font-display text-[10px] uppercase tracking-[0.18em] text-foreground/75" data-t="openingNames">عبدالرحمن · آمنة</p>
+    </div>
+    <div class="opening-fade absolute inset-x-0 bottom-[8svh] z-10 transition-opacity duration-500">
+      <p class="tap-glow font-display text-[15px] uppercase tracking-[0.22em] text-primary" data-t="tap">Tap the seal to open</p>
+      <p class="mt-2 font-display text-sm text-foreground">❧</p>
+    </div>
+  </div>
+
+  <div id="petals"></div>
+
+  <div id="content" class="invisible h-screen overflow-hidden">
+
+    <!-- Hero -->
+    <section class="reference-hero relative overflow-hidden text-center">
+      <img src="assets/images/hero.jpg" width="768" height="1663" alt="Hand-painted dusty rose floral wedding stationery framing the wedding hall" class="absolute inset-0 h-full w-full object-cover">
+      <div class="reference-hero-copy absolute inset-x-[12%] top-[15.5%] z-10 flex flex-col items-center text-rose-deep">
+        <p class="font-editorial text-[clamp(13px,3.7vw,20px)] font-medium uppercase leading-[1.65] tracking-[0.12em]" data-t="together">Together<br>with their families</p>
+        <h1 class="mt-[3%] font-couple text-[clamp(44px,14vw,96px)] leading-[1.05]">عبدالرحمن<span class="my-[2%] block font-editorial text-[0.3em] leading-none text-gold">&amp;</span>آمنة</h1>
+        <p class="mt-[8%] font-editorial text-[clamp(13px,3.7vw,20px)] font-medium uppercase leading-[1.7] tracking-[0.11em]" data-t="invite">Invite you to celebrate<br>their wedding</p>
+        <div class="mt-[7%] grid w-[60%] grid-cols-[1fr_auto_1fr] items-center gap-[7%]">
+          <span class="number-face border-y border-gold/60 py-[18%] text-[clamp(10px,2.8vw,16px)] font-semibold uppercase tracking-[0.08em]" data-t="sun">السبت</span>
+          <span class="number-face text-[clamp(48px,15vw,90px)] font-medium leading-none text-primary">12</span>
+          <span class="number-face border-y border-gold/60 py-[18%] text-[clamp(10px,2.8vw,16px)] font-semibold uppercase tracking-[0.08em]" data-t="sep">آب</span>
+        </div>
+        <p class="number-face mt-[3%] text-[clamp(17px,4.6vw,27px)] font-medium tracking-[0.12em] text-primary">2028</p>
+        <p class="font-editorial mt-[7%] text-[clamp(12px,3.4vw,19px)] font-medium uppercase leading-[1.7] tracking-[0.1em]" data-t="venueHero">صالة ليلة العمر<br>غزة، فلسطين</p>
+      </div>
+      <div id="scrollHint" aria-hidden="true" class="scroll-hint pointer-events-none absolute inset-x-0 bottom-[16%] z-20 flex flex-col items-center transition-opacity duration-700 opacity-0">
+        <span class="scroll-hint-hand text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand h-9 w-9" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></span>
+        <span class="scroll-hint-word mt-1 font-display text-[12px] uppercase tracking-[0.22em] text-primary" data-t="swipe">Scroll</span>
+        <span class="mt-1.5 h-8 w-px bg-gradient-to-b from-primary/70 to-transparent"></span>
+      </div>
+    </section>
+
+    <!-- Hero seam -->
+    <a href="#details" aria-label="Continue to the wedding details" class="relative z-20 -mt-36 flex h-36 items-end justify-center pb-6 transition-opacity hover:opacity-75">
+      <span aria-hidden="true" class="hero-seam-fade absolute inset-0"></span>
+      <span aria-hidden="true" class="relative flex items-center gap-3">
+        <span class="hero-seam-line hero-seam-line-start"></span>
+        <svg viewBox="0 0 92 92" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-16 w-auto shrink-0"><g stroke="var(--primary)" stroke-width="1" opacity=".8"><path d="M18 32c-6-3-11-2-15 1 4 3 9 3 15 2"/><path d="M9 27c1-3 3-5 6-5-1 3-3 4-6 5Z"/><path d="M74 56c6 3 11 2 15-1-4-3-9-3-15-2"/><path d="M83 51c-1-3-3-5-6-5 1 3 3 4 6 5Z"/></g><rect x="18" y="6" width="56" height="80" rx="2.5" fill="var(--card)" stroke="color-mix(in oklab, var(--gold) 62%, transparent)" stroke-width="1"/><rect x="21.5" y="9.5" width="49" height="73" rx="1.5" fill="none" stroke="color-mix(in oklab, var(--gold) 42%, transparent)" stroke-width="0.7"/><g transform="translate(46 34)"><ellipse cx="0" cy="-6.4" rx="3.2" ry="5.2" transform="rotate(0)" fill="var(--rose-soft)" fill-opacity=".55" stroke="var(--primary)" stroke-width=".8"/><ellipse cx="0" cy="-6.4" rx="3.2" ry="5.2" transform="rotate(72)" fill="var(--rose-soft)" fill-opacity=".55" stroke="var(--primary)" stroke-width=".8"/><ellipse cx="0" cy="-6.4" rx="3.2" ry="5.2" transform="rotate(144)" fill="var(--rose-soft)" fill-opacity=".55" stroke="var(--primary)" stroke-width=".8"/><ellipse cx="0" cy="-6.4" rx="3.2" ry="5.2" transform="rotate(216)" fill="var(--rose-soft)" fill-opacity=".55" stroke="var(--primary)" stroke-width=".8"/><ellipse cx="0" cy="-6.4" rx="3.2" ry="5.2" transform="rotate(288)" fill="var(--rose-soft)" fill-opacity=".55" stroke="var(--primary)" stroke-width=".8"/><circle r="1.8" fill="var(--gold)"/></g><g stroke="color-mix(in oklab, var(--foreground) 30%, transparent)" stroke-width="1"><path d="M28 68h36"/><path d="M28 73.5h26"/><path d="M28 79h31"/></g></svg>
+        <span class="hero-seam-line hero-seam-line-end"></span>
+      </span>
+    </a>
+
+    <!-- Candle -->
+    <section class="candle-section paper-texture relative overflow-hidden px-6 pb-24 pt-14 text-center">
+      <img src="assets/images/botanical-arch.png" width="1024" height="1536" loading="lazy" alt="" aria-hidden="true" class="pointer-events-none absolute select-none -left-24 top-20 w-64 opacity-45">
+      <img src="assets/images/botanical-corner.png" width="1024" height="1024" loading="lazy" alt="" aria-hidden="true" class="pointer-events-none absolute select-none -right-24 bottom-6 w-64 opacity-45">
+      <header class="relative z-10 text-center">
+        <p class="font-script text-3xl text-primary" data-t="wishScript">Make a wish</p>
+        <h2 class="font-display text-4xl text-rose-deep sm:text-5xl" data-t="wishTitle">Blow the candle</h2>
+        <div class="flex items-center justify-center gap-2 text-gold mt-3" aria-hidden="true"><span class="h-px w-9 bg-current"></span><span class="font-display text-lg">❧</span><span class="h-px w-9 bg-current"></span></div>
+      </header>
+      <p class="relative z-10 mx-auto mt-4 max-w-xs font-editorial text-lg text-muted-foreground" data-t="wishHint">Make a wish &amp; blow out the candle 🕯️</p>
+      <div id="candleStage" class="candle-stage relative z-10 mx-auto mt-3 h-[34rem] max-w-md overflow-visible">
+        <div class="candle-halo" aria-hidden="true"></div>
+        <div id="candleReveal" class="candle-reveal absolute inset-x-0 top-3 z-30 px-2" aria-live="polite"></div>
+        <div class="candle-vine candle-vine-left" aria-hidden="true"></div>
+        <div class="candle-vine candle-vine-right" aria-hidden="true"></div>
+        <div id="candle" role="button" tabindex="0" aria-label="Blow out the candle" aria-pressed="false" class="absolute bottom-0 left-1/2 z-20 flex h-[21rem] w-56 -translate-x-1/2 touch-pan-y cursor-pointer flex-col items-center justify-end pb-5 outline-none focus-visible:ring-1 focus-visible:ring-primary/60">
+          <div class="relative h-20 w-10">
+            <div id="flame" class="candle-flame"><span></span></div>
+            <div class="absolute bottom-0 left-1/2 h-3 w-[2px] -translate-x-1/2 rounded-full bg-foreground/80"></div>
+          </div>
+          <div class="candle-body"><span class="candle-wax-drip"></span></div>
+          <div class="candle-holder" aria-hidden="true"><span></span></div>
+          <span id="candleCue" class="candle-cue pointer-events-none absolute bottom-[19.5rem] whitespace-nowrap font-script text-2xl text-primary"><span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand h-5 w-5" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg> <span data-t="wishSwipe">Swipe across the flame</span></span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section id="details" class="paper-texture relative overflow-hidden px-6 py-24">
+      <img src="assets/images/botanical-arch.png" width="1024" height="1536" loading="lazy" alt="" aria-hidden="true" class="pointer-events-none absolute select-none -left-24 bottom-0 w-64 opacity-50">
+      <div class="relative z-10 mx-auto grid max-w-3xl items-center gap-12 md:grid-cols-[.9fr_1.1fr]">
+        <div class="relative mx-auto w-[82%] max-w-sm rotate-[-2deg] bg-card p-3 shadow-[0_20px_50px_color-mix(in_oklab,var(--foreground)_15%,transparent)]">
+          <img src="assets/images/couple.jpg" width="1024" height="1280" loading="lazy" alt="A bride and groom walking together through a palace courtyard" class="aspect-[4/5] w-full object-cover">
+          <p class="py-3 text-center font-script text-2xl text-primary" data-t="forever">Where forever began</p>
+        </div>
+        <div class="text-center md:text-start">
+          <header class="relative z-10 text-center">
+            <p class="font-script text-3xl text-primary" data-t="souls">Two souls, one path</p>
+            <h2 class="font-display text-4xl text-rose-deep sm:text-5xl" data-t="story">Our story</h2>
+            <div class="flex items-center justify-center gap-2 text-gold mt-3" aria-hidden="true"><span class="h-px w-9 bg-current"></span><span class="font-display text-lg">❧</span><span class="h-px w-9 bg-current"></span></div>
+          </header>
+          <p class="mt-7 text-sm leading-8 text-muted-foreground" data-t="storyBody">From a quiet conversation to a beautiful journey, our story is a reminder that the best things in life are meant to be shared. Now, surrounded by those we love most, we begin our greatest chapter.</p>
+          <p class="mt-7 font-script text-3xl text-primary" data-t="storyClose">With joy in every step.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Venue -->
+    <section class="relative overflow-hidden px-6 py-24 text-center">
+      <img src="assets/images/botanical-corner.png" width="1024" height="1024" loading="lazy" alt="" aria-hidden="true" class="pointer-events-none absolute select-none -bottom-20 -right-14 w-64 opacity-55">
+      <header class="relative z-10 text-center">
+        <p class="font-script text-3xl text-primary" data-t="setting">The setting</p>
+        <h2 class="font-display text-4xl text-rose-deep sm:text-5xl" data-t="venue">صالة ليلة العمر</h2>
+        <div class="flex items-center justify-center gap-2 text-gold mt-3" aria-hidden="true"><span class="h-px w-9 bg-current"></span><span class="font-display text-lg">❧</span><span class="h-px w-9 bg-current"></span></div>
+      </header>
+      <div class="relative z-10 mx-auto mt-8 max-w-3xl border border-gold/45 bg-card p-3">
+        <img src="assets/images/hall.jpg" width="408" height="306" loading="lazy" alt="صالة ليلة العمر مجهزة لحفل الزفاف" class="aspect-[4/3] w-full object-cover object-center">
+      </div>
+      <p class="relative z-10 mx-auto mt-7 max-w-md text-sm leading-7 text-muted-foreground" data-t="venueBody">An evening among old stone, olive trees and candlelight in the heart of Gaza.</p>
+      <div class="relative z-10 mx-auto mt-7 max-w-md border-y border-gold/40 py-6">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin mx-auto h-6 w-6 text-primary" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+        <p class="mt-3 font-editorial text-2xl font-semibold text-rose-deep" data-t="venue">صالة ليلة العمر</p>
+        <p class="mt-1 text-sm font-medium uppercase text-muted-foreground" data-t="location">غزة · فلسطين</p>
+        <div class="map-frame mx-auto mt-6">
+          <span class="map-corner tl" aria-hidden="true"></span><span class="map-corner tr" aria-hidden="true"></span>
+          <span class="map-corner bl" aria-hidden="true"></span><span class="map-corner br" aria-hidden="true"></span>
+          <div class="map-window">
+            <iframe src="https://www.google.com/maps?q=%D8%B5%D8%A7%D9%84%D8%A9+%D9%84%D9%8A%D9%84%D8%A9+%D8%A7%D9%84%D8%B9%D9%85%D8%B1+%D8%BA%D8%B2%D8%A9&amp;output=embed" title="خريطة صالة ليلة العمر" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <span class="map-vignette" aria-hidden="true"></span>
+          </div>
+        </div>
+        <a id="mapsLink" href="#" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border bg-background shadow-sm hover:bg-accent hover:text-accent-foreground py-2 mt-5 h-11 rounded-none border-primary/45 px-6 font-editorial text-sm font-semibold uppercase"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> <span data-t="maps">Open in maps</span></a>
+      </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="relative overflow-hidden bg-ivory-deep px-5 py-24 text-center">
+      <img src="assets/images/botanical-corner.png" width="1024" height="1024" loading="lazy" alt="" aria-hidden="true" class="pointer-events-none absolute select-none -bottom-14 -right-14 w-56 opacity-65">
+      <header class="relative z-10 text-center">
+        <p class="font-script text-3xl text-primary" data-t="until">Until we say</p>
+        <h2 class="font-display text-4xl text-rose-deep sm:text-5xl" data-t="iDo">I do</h2>
+        <div class="flex items-center justify-center gap-2 text-gold mt-3" aria-hidden="true"><span class="h-px w-9 bg-current"></span><span class="font-display text-lg">❧</span><span class="h-px w-9 bg-current"></span></div>
+      </header>
+      <div id="countdown" class="relative z-10 mx-auto mt-10 grid max-w-xl border-y border-gold/50 py-7" style="grid-template-columns:repeat(5,minmax(0,1fr))"></div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp" class="paper-texture relative overflow-hidden px-6 py-24">
+      <img src="assets/images/botanical-arch.png" width="1024" height="1536" loading="lazy" alt="" aria-hidden="true" class="pointer-events-none absolute select-none -left-28 -top-20 w-72 opacity-55">
+      <div class="relative z-10 mx-auto max-w-lg">
+        <header class="relative z-10 text-center">
+          <p class="font-script text-3xl text-primary" data-t="kindly">Kindly reply</p>
+          <h2 class="font-display text-4xl text-rose-deep sm:text-5xl" data-t="join">Will you join us?</h2>
+          <div class="flex items-center justify-center gap-2 text-gold mt-3" aria-hidden="true"><span class="h-px w-9 bg-current"></span><span class="font-display text-lg">❧</span><span class="h-px w-9 bg-current"></span></div>
+        </header>
+        <p class="mx-auto mt-6 max-w-sm text-center text-sm leading-7 text-muted-foreground" data-t="rsvpBody">Please let us know if you can attend our special day.</p>
+        <input id="wishName" type="text" maxlength="80" autocomplete="name" class="flex w-full border shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring md:text-sm mt-8 h-12 rounded-none border-gold/45 bg-card/55 px-4 text-sm" aria-label="Your name" placeholder="Your name">
+        <textarea id="note" class="flex w-full border shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring md:text-sm mt-3 min-h-32 rounded-none border-gold/45 bg-card/55 p-4 text-sm" aria-label="Leave a note for the couple…" placeholder="Leave a note for the couple…" maxlength="500"></textarea>
+        <button id="sendBtn" type="button" disabled class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 px-4 py-2 mt-4 h-12 w-full rounded-none text-[11px] uppercase"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg> <span data-t="send">Send my reply</span></button>
+        <p id="wishStatus" class="wish-status" aria-live="polite"></p>
+        <div id="wishesList" class="wishes-list" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="paper-texture relative flex min-h-[72svh] items-center justify-center overflow-hidden px-6 py-24 text-center">
+      <img src="assets/images/botanical-arch.png" width="1024" height="1536" loading="lazy" alt="" aria-hidden="true" class="pointer-events-none absolute select-none -left-24 -top-16 w-72 opacity-75">
+      <img src="assets/images/botanical-corner.png" width="1024" height="1024" loading="lazy" alt="" aria-hidden="true" class="pointer-events-none absolute select-none -bottom-20 -right-16 w-72 opacity-80">
+      <div class="relative z-10 max-w-md">
+        <p class="font-display text-2xl" data-t="closing">We cannot wait to celebrate with you.</p>
+        <div class="flex items-center justify-center gap-2 text-gold my-6" aria-hidden="true"><span class="h-px w-9 bg-current"></span><span class="font-display text-lg">❧</span><span class="h-px w-9 bg-current"></span></div>
+        <p class="font-script text-4xl text-primary" data-t="withLove">With love,</p>
+        <h2 class="mt-2 font-display text-5xl text-rose-deep" data-t="couple">عبدالرحمن وآمنة</h2>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<script>
+/* ===== Edit the invitation details here ===== */
+const CONFIG = {
+  weddingDate: '2028-08-12T17:30:00+03:00',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=%D8%B5%D8%A7%D9%84%D8%A9+%D9%84%D9%8A%D9%84%D8%A9+%D8%A7%D9%84%D8%B9%D9%85%D8%B1+%D8%BA%D8%B2%D8%A9',
+  sheetUrl: 'https://script.google.com/macros/s/AKfycbz_6gdDpj4eF44XH1PyKD19k3PhXhRMnogKNnsAbRJ2JFX9ylK2ZSB6_ocUbNzr_E1_/exec' // Google Apps Script web app URL (see google-apps-script.gs); leave empty to skip saving
+};
+
+const T = {
+  ar: {
+    openingTitle: 'دعوة زفاف<br>لا مثيل لها', openingNames: 'عبدالرحمن · آمنة', open: 'افتح دعوة زفاف عبدالرحمن وآمنة', tap: 'اضغط على الختم للفتح',
+    together: 'برفقة<br>عائلتيهما', invite: 'يدعوانكم لمشاركتهما<br>فرحة زفافهما', sun: 'السبت', sep: 'آب',
+    venueHero: 'صالة ليلة العمر<br>غزة، فلسطين', swipe: 'اسحب', scrollAria: 'الانتقال إلى تفاصيل الحفل',
+    sunday: 'السبت', date: '١٢ آب ٢٠٢٨', reception: 'الاستقبال', time: 'الخامسة والنصف مساءً', palace: 'صالة ليلة العمر', amman: 'غزة، فلسطين',
+    souls: 'روحان، ودرب واحد', story: 'حكايتنا',
+    storyBody: 'من حديث هادئ بدأت رحلة جميلة، لتذكرنا حكايتنا بأن أجمل ما في الحياة خُلق لنتشاركه. واليوم، وبين من نحب، نبدأ أجمل فصول عمرنا.',
+    storyClose: 'وبكل خطوة، فرح.', forever: 'هنا بدأت حكاية الأبد', setting: 'المكان', venue: 'صالة ليلة العمر',
+    venueBody: 'أمسية مليئة بالفرح وضوء الشموع في قلب غزة.', location: 'غزة · فلسطين', maps: 'افتح الخريطة',
+    until: 'حتى نقول', iDo: 'نعم', countdown: ['سنة', 'يوم', 'ساعة', 'دقيقة', 'ثانية'],
+    secret: 'سر صغير', justForYou: 'لكم فقط', revealTitle: 'نلتقي تحت النجوم', revealBody: 'احتفال قمري في الحديقة بعد العشاء',
+    scratch: 'اكشط لتكشف الرسالة', reveal: 'اكشف الرسالة مباشرة',
+    wishScript: 'تمنَّ أمنية', wishTitle: 'أطفئ الشمعة', wishHint: 'تمنَّ أمنية وأطفئ الشمعة 🕯️', wishSwipe: 'اسحب فوق اللهب', wishAria: 'أطفئ الشمعة',
+    forever2: 'وهكذا، يبدأ الأبد…',
+    kindly: 'شاركونا فرحتنا', join: 'أرسلوا تهانيكم', rsvpBody: 'اكتبوا كلمة مباركة للعروسين، تبقى ذكرى جميلة في قلبيهما.',
+    nameField: 'اسمكم', note: 'اكتبوا تهنئتكم للعروسين…', send: 'إرسال التهنئة',
+    thanks: 'شكراً من القلب.', received: 'وصلت تهنئتكم، شكراً من القلب 🤍', sendFail: 'تعذّر الإرسال، حاولوا مرة أخرى.', noWishes: 'كونوا أول من يبارك للعروسين 🤍',
+    closing: 'لا يسعنا الانتظار للاحتفال معكم.', withLove: 'مع الحب،', couple: 'عبدالرحمن وآمنة', watermark: 'صُنع بحب من',
+    switchLabel: 'English', switchAria: 'التبديل إلى الإنجليزية', mute: 'كتم الموسيقى', unmute: 'تشغيل الموسيقى'
+  }
+};
+
+const $ = id => document.getElementById(id);
+const main = $('main');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let lang = 'ar', opened = false, playing = false, muted = false, candleOut = false, answer = null;
+
+$('mapsLink').href = CONFIG.mapsUrl;
+
+/* ===== Language ===== */
+function applyLang() {
+  const t = T[lang];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  main.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  main.classList.toggle('invitation-ar', lang === 'ar');
+  document.querySelectorAll('[data-t]').forEach(el => { el.innerHTML = t[el.dataset.t]; });
+  $('sealBtn').setAttribute('aria-label', t.open);
+  $('candle').setAttribute('aria-label', t.wishAria);
+  document.querySelector('a[href="#details"]').setAttribute('aria-label', t.scrollAria);
+  $('wishName').placeholder = t.nameField;
+  $('wishName').setAttribute('aria-label', t.nameField);
+  $('note').placeholder = t.note;
+  $('note').setAttribute('aria-label', t.note);
+  $('muteBtn').setAttribute('aria-label', muted ? t.unmute : t.mute);
+  renderWishes();
+  renderCountdownLabels();
+  if (candleOut) renderCandleReveal();
+}
+
+/* ===== Music ===== */
+const music = $('music');
+function startMusic() {
+  if (playing) return;
+  playing = true;
+  music.volume = 0.55;
+  music.play().catch(() => {});
+  $('muteBtn').hidden = false;
+}
+$('muteBtn').addEventListener('click', () => {
+  muted = !muted;
+  music.muted = muted;
+  $('icoVol').hidden = muted;
+  $('icoMute').hidden = !muted;
+  $('muteBtn').setAttribute('aria-label', muted ? T[lang].unmute : T[lang].mute);
+});
+
+/* ===== Opening envelope ===== */
+const opening = $('opening'), video = $('openingVideo');
+let videoStarted = false, leaving = false;
+function finishOpening() {
+  if (leaving) return;
+  leaving = true;
+  opening.classList.add('opening-leave');
+  $('openingBackdrop').style.opacity = 0;
+  setTimeout(openInvitation, 850);
+}
+function startOpening() {
+  if (videoStarted || leaving) return;
+  startMusic();
+  if (reduceMotion) return finishOpening();
+  videoStarted = true;
+  video.classList.replace('opacity-0', 'opacity-100');
+  document.querySelectorAll('.opening-fade').forEach(el => el.classList.add('opacity-0'));
+  video.play().catch(finishOpening);
+}
+video.addEventListener('timeupdate', () => { if (video.currentTime >= 5.1) finishOpening(); });
+video.addEventListener('ended', finishOpening);
+$('sealBtn').addEventListener('click', startOpening);
+
+// Keep the seal button over the wax seal in the envelope photo (object-cover, centred).
+// Seal centre and diameter are measured on the 768×1536 source image.
+const SEAL = { x: 385, y: 760, size: 165, imgW: 768, imgH: 1536 };
+function positionSeal() {
+  const w = opening.clientWidth, h = opening.clientHeight;
+  const scale = Math.max(w / SEAL.imgW, h / SEAL.imgH);
+  const btn = $('sealBtn');
+  btn.style.left = (w - SEAL.imgW * scale) / 2 + SEAL.x * scale + 'px';
+  btn.style.top = (h - SEAL.imgH * scale) / 2 + SEAL.y * scale + 'px';
+  btn.style.width = btn.style.height = SEAL.size * scale + 'px';
+}
+positionSeal();
+window.addEventListener('resize', positionSeal);
+
+function openInvitation() {
+  opened = true;
+  opening.remove();
+  $('openingBackdrop').remove();
+  $('content').className = 'invitation-enter';
+  renderPetals();
+  initScrollHint();
+}
+
+/* ===== Falling petals ===== */
+function renderPetals() {
+  const petals = [
+    { left: '7%', size: 13, fall: 30, delay: -6, sway: 5.2, tone: 'text-rose-soft/45' },
+    { left: '24%', size: 9, fall: 38, delay: -17, sway: 6.4, tone: 'text-gold/40' },
+    { left: '41%', size: 15, fall: 26, delay: -11, sway: 4.6, tone: 'text-primary/35' },
+    { left: '58%', size: 8, fall: 42, delay: -25, sway: 7.1, tone: 'text-rose-soft/40' },
+    { left: '72%', size: 12, fall: 33, delay: -3, sway: 5.8, tone: 'text-gold/35' },
+    { left: '86%', size: 10, fall: 29, delay: -20, sway: 6.8, tone: 'text-primary/30' },
+    { left: '94%', size: 7, fall: 45, delay: -9, sway: 7.6, tone: 'text-rose-soft/35' }
+  ];
+  $('petals').outerHTML = '<div class="petal-field" aria-hidden="true">' + petals.map(p =>
+    `<span class="petal ${p.tone}" style="left:${p.left};width:${p.size}px;height:${p.size}px;animation-duration:${p.fall}s;animation-delay:${p.delay}s"><svg viewBox="0 0 24 24" fill="currentColor" style="animation-duration:${p.sway}s"><path d="M12 1.6c6.2 3.4 8.4 9.3 5.1 15.1-1.4 2.5-3.3 4.1-5.1 5.7-1.8-1.6-3.7-3.2-5.1-5.7C3.6 10.9 5.8 5 12 1.6Z"/></svg></span>`
+  ).join('') + '</div>';
+}
+
+/* ===== Scroll hint (shows after 3.3s idle) ===== */
+function initScrollHint() {
+  if (reduceMotion) return;
+  const hint = $('scrollHint');
+  let timer;
+  const reset = () => {
+    hint.classList.replace('opacity-100', 'opacity-0');
+    clearTimeout(timer);
+    timer = setTimeout(() => hint.classList.replace('opacity-0', 'opacity-100'), 3300);
+  };
+  reset();
+  ['scroll', 'touchstart', 'wheel', 'pointerdown'].forEach(ev => window.addEventListener(ev, reset, { passive: true }));
+}
+
+/* ===== Candle ===== */
+const candle = $('candle');
+function renderCandleReveal() {
+  const t = T[lang];
+  const ico = (cls, inner) => `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide ${cls} mx-auto h-4 w-4 text-primary" aria-hidden="true">${inner}</svg>`;
+  const cal = ico('lucide-calendar-days', '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/>');
+  const clock = ico('lucide-clock-3', '<circle cx="12" cy="12" r="10"/><path d="M12 6v6h4"/>');
+  const pin = ico('lucide-map-pin', '<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>');
+  $('candleReveal').innerHTML = `
+    <p class="font-couple text-5xl text-rose-deep">عبدالرحمن وآمنة</p>
+    <p class="mt-1 font-script text-2xl text-primary">${t.forever2}</p>
+    <div class="candle-reveal-details mx-auto mt-5 grid max-w-sm grid-cols-3 gap-2 border-y border-gold/45 py-4">
+      <div>${cal}<strong class="mt-2 block font-editorial text-base text-rose-deep">${t.sunday}</strong><span class="number-face mt-1 block text-xs text-muted-foreground">${t.date}</span></div>
+      <div>${clock}<strong class="mt-2 block font-editorial text-base text-rose-deep">${t.reception}</strong><span class="number-face mt-1 block text-xs text-muted-foreground">${t.time}</span></div>
+      <div>${pin}<strong class="mt-2 block font-editorial text-base text-rose-deep">${t.palace}</strong><span class="mt-1 block text-xs text-muted-foreground">${t.amman}</span></div>
+    </div>`;
+}
+function blowCandle() {
+  if (candleOut) return;
+  candleOut = true;
+  if (navigator.vibrate) navigator.vibrate(30);
+  $('candleStage').classList.add('is-out');
+  candle.classList.add('pointer-events-none');
+  candle.setAttribute('aria-pressed', 'true');
+  $('flame').outerHTML = '<div class="candle-smoke"><span></span><span></span><span></span></div>';
+  $('candleCue').remove();
+  renderCandleReveal();
+  const sparkles = document.createElement('div');
+  sparkles.className = 'candle-sparkles';
+  sparkles.setAttribute('aria-hidden', 'true');
+  sparkles.innerHTML = Array.from({ length: 10 }, (_, i) => `<span style="left:${12 + (i * 37) % 76}%;animation-delay:${0.3 + i * 0.12}s"></span>`).join('');
+  $('candleReveal').after(sparkles);
+}
+let swipeFrom = null, swipeDist = 0;
+candle.addEventListener('pointerdown', e => { swipeFrom = { x: e.clientX, y: e.clientY }; swipeDist = 0; });
+candle.addEventListener('pointermove', e => {
+  if (!swipeFrom || candleOut) return;
+  swipeDist += Math.hypot(e.clientX - swipeFrom.x, e.clientY - swipeFrom.y);
+  swipeFrom = { x: e.clientX, y: e.clientY };
+  if (swipeDist > 90) blowCandle();
+});
+candle.addEventListener('pointerup', () => { if (swipeDist < 12) blowCandle(); swipeFrom = null; });
+candle.addEventListener('pointerleave', () => { swipeFrom = null; });
+candle.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); blowCandle(); } });
+
+/* ===== Countdown ===== */
+const target = new Date(CONFIG.weddingDate).getTime();
+const cd = $('countdown');
+cd.innerHTML = [0, 1, 2, 3, 4].map(() =>
+  '<div class="border-e border-gold/35 last:border-e-0"><strong class="number-face block font-medium leading-none text-primary" style="font-size:clamp(22px,7vw,44px)">00</strong><span class="mt-2 block text-[10px] sm:text-[11px] font-semibold uppercase text-muted-foreground"></span></div>'
+).join('');
+function renderCountdownLabels() { cd.querySelectorAll('span').forEach((s, i) => { s.textContent = T[lang].countdown[i]; }); }
+// Whole calendar years first, then the remaining days/hours/minutes/seconds
+function addYears(ms, n) { const x = new Date(ms); x.setFullYear(x.getFullYear() + n); return x.getTime(); }
+function tick() {
+  const now = Date.now();
+  let years = 0;
+  while (addYears(now, years + 1) <= target) years++;
+  const d = Math.max(0, target - addYears(now, years));
+  const vals = [years, Math.floor(d / 864e5), Math.floor(d / 36e5) % 24, Math.floor(d / 6e4) % 60, Math.floor(d / 1e3) % 60];
+  cd.querySelectorAll('strong').forEach((s, i) => { s.textContent = String(vals[i]).padStart(2, '0'); });
+}
+tick();
+setInterval(tick, 1000);
+
+/* ===== Wishes ===== */
+let wishes = [];
+const esc = v => String(v).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+function fmtDate(v) {
+  const d = new Date(v);
+  return isNaN(d) ? '' : d.toLocaleDateString(lang === 'ar' ? 'ar' : 'en', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+function renderWishes() {
+  const box = $('wishesList');
+  if (!box) return;
+  box.scrollLeft = 0;
+  box.innerHTML = wishes.length
+    ? wishes.map(w => `<div class="wish-card">${w.name ? `<strong class="wish-name">${esc(w.name)}</strong>` : ''}${esc(w.message)}${w.time ? `<time>${fmtDate(w.time)}</time>` : ''}</div>`).join('')
+    : `<p class="wishes-empty">${T[lang].noWishes}</p>`;
+}
+async function loadWishes() {
+  if (!CONFIG.sheetUrl) return renderWishes();
+  try {
+    const res = await fetch(CONFIG.sheetUrl + '?action=wishes&t=' + Date.now());
+    const data = await res.json();
+    const list = Array.isArray(data.wishes) ? data.wishes : Array.isArray(data.messages) ? data.messages.slice().reverse() : null;
+    if (list) wishes = list.filter(w => w && String(w.message || '').trim());
+  } catch (e) {}
+  renderWishes();
+}
+const canSend = () => { $('sendBtn').disabled = !$('note').value.trim() || !$('wishName').value.trim(); };
+$('note').addEventListener('input', canSend);
+$('wishName').addEventListener('input', canSend);
+$('sendBtn').addEventListener('click', async () => {
+  const msg = $('note').value.trim();
+  const name = $('wishName').value.trim();
+  if (!msg || !name) return;
+  $('sendBtn').disabled = true;
+  $('wishStatus').textContent = '';
+  try {
+    if (CONFIG.sheetUrl) {
+      await fetch(CONFIG.sheetUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ type: 'rsvp', name: name, response: 'تهنئة', contact: '', message: msg })
+      });
+    }
+    wishes.unshift({ name: name, message: msg, time: new Date().toISOString() });
+    renderWishes();
+    $('note').value = '';
+    $('wishStatus').textContent = T[lang].received;
+  } catch (e) {
+    $('sendBtn').disabled = false;
+    $('wishStatus').textContent = T[lang].sendFail;
+  }
+});
+loadWishes();
+
+applyLang();
+</script>
+</body>
+</html>
